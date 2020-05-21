@@ -1,0 +1,11 @@
+package main
+
+import (
+	"fmt"
+
+	"example.com/in10c2/hello/morestrings"
+)
+
+func main.hello.v2() {
+	fmt.Println(morestrings.ReverseRunes("!oG ,olleH"))
+}

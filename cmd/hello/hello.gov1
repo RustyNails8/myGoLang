@@ -1,0 +1,7 @@
+package main
+
+import "fmt"
+
+func main.hello.v1() {
+	fmt.Println("Hello, world.")
+}
