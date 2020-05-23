@@ -1,0 +1,9 @@
+rem Build go routines
+rem Sumit Das
+rem 2020 05 23
+
+rem @echo off
+set WORKDIR=%cd%
+cd %GOPATH%\bin
+go build %WORKDIR%\%1
+cd %WORKDIR%
