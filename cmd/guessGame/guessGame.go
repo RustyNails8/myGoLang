@@ -19,7 +19,8 @@ func main() {
 
 	fmt.Println(" \n\n *** Guess The Number Game ***")
 	fmt.Print(" Guess a number between 1 to 100:  ")
-	fmt.Println(" The target was ... ", target)
+	// fmt.Println(" The target was ... ", target)
+	success := false
 
 	for tries := 0; tries < 10; tries++ {
 
@@ -40,9 +41,13 @@ func main() {
 		} else if guess > target {
 			fmt.Println(" Too high  a guess ...")
 		} else if guess == target {
+			success = true
 			fmt.Println(" Correct    guess ...")
 			break
 		}
+	}
+	if !success {
+		fmt.Println(" The target was ... ", target)
 	}
 	fmt.Println(" The target was ... ", target)
 }
