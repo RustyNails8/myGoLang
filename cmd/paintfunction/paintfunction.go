@@ -23,12 +23,22 @@ func wall() float64 {
 	fmt.Print("Enter the width of wall..... : ")
 	wd, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	wd = strings.TrimSpace(wd)
-	width, _ := strconv.ParseFloat(wd, 64)
+	width, err := strconv.ParseFloat(wd, 64)
+	if err != nil {
+		fmt.Println("\n\nWould you please enter a number ?")
+		fmt.Println("Please rerun the program !\n\n I got this error : ")
+		log.Fatal(err)
+	}
+
 	fmt.Print("Enter the height of wall.... : ")
 	ht, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	ht = strings.TrimSpace(ht)
-	height, _ := strconv.ParseFloat(ht, 64)
-
+	height, err := strconv.ParseFloat(ht, 64)
+	if err != nil {
+		fmt.Println("\n\nWould you please enter a number ?")
+		fmt.Println("Please rerun the program !\n\n I got this error : ")
+		log.Fatal(err)
+	}
 	// var ar float64
 	fmt.Printf("%.2f Liters of Paint required for this wall\n", calcArea(width, height))
 	fmt.Println("---------------")
