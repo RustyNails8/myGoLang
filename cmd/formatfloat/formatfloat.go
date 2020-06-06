@@ -1,3 +1,4 @@
+//Package formatfloat will display difeernt types of float formats
 package main
 
 import (

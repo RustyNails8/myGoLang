@@ -1,4 +1,4 @@
-//Package paintfunction fings the Liters of paint
+//Package paintfunction finds the Liters of paint
 //you need to paint walls for given dimensions
 package main
 
@@ -7,16 +7,19 @@ import (
 	"fmt"
 )
 
+// Says Hi
 func sayHi() {
 	// Comment
 	fmt.Println("Hi Welcome to Paint function....")
 }
 
+// Calulates Area of the wall
 func calcArea(wd float64, ht float64) float64 {
 	// fmt.Printf("%.2f Liters of Paint required", (wd*ht)/10.0)
 	return (wd * ht) / 10.0
 }
 
+// Gets dimentions of the walls
 func wall() float64 {
 	// fmt.Print("Enter the width of wall..... : ")
 	kbInput.Prompt("Enter the width of wall..... : ")

@@ -1,4 +1,4 @@
-package main
+//Pckage reflectUsage uses reflect modulepackage main
 
 import(
   "fmt"

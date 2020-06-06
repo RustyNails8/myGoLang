@@ -1,3 +1,4 @@
+//Package mathconv how to interchange number variable tyeps
 package main
 
 import (

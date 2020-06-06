@@ -1,3 +1,4 @@
+//Package hello is first progeam from "Official - how to code in Go"
 package main
 
 import (

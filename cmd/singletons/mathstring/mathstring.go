@@ -1,3 +1,4 @@
+//Package mathstring to check floor function
 package main
 
 import (

@@ -1,3 +1,4 @@
+//Package formatput displays differnt types of variables
 package main
 
 import (

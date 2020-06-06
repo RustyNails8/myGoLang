@@ -1,3 +1,4 @@
+//Package taxcal will show if you have budget for the total price after inclusing tax
 package main
 
 import (
