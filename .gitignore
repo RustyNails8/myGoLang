@@ -3,3 +3,5 @@ internal/*
 test/*
 *.exe
 tmp/*
+.idea/*
+.branchesgit

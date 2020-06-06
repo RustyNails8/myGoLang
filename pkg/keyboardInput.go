@@ -1,0 +1,60 @@
+// Package kbInput takes inputs from user in various formats
+// Use
+package kbInput
+
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+	"strings"
+)
+
+var userPrompt string
+var userNumberRaw string
+var userNumberInt int
+var userNumberFloat float64
+
+// Prompt Function kbInput.Prompt displays the User Prompt Message
+func Prompt(userPrompt string) {
+	fmt.Print(userPrompt)
+}
+
+// GetInt Funciton kbInput.GeGetInt takes the integer from User Input
+func GetInt(userNumberRaw string) int {
+	userNumberRaw, err := bufio.NewReader(os.Stdin).ReadString('\n')
+	if err != nil {
+		log.Fatal(err)
+	}
+	userNumberRaw = strings.TrimSpace(userNumberRaw)
+
+	userNumberInt, err := strconv.Atoi(userNumberRaw)
+	if err != nil {
+		fmt.Println("\n\nWould you please enter a number ?")
+		fmt.Println("Please rerun the program !\n\n I got this error : ")
+		log.Fatal(err)
+	}
+
+	return userNumberInt
+
+}
+
+// GetFloat Funciton kbInput.GeGetInt takes the integer from User Input
+func GetFloat(userNumberRaw string) float64 {
+	userNumberRaw, err := bufio.NewReader(os.Stdin).ReadString('\n')
+	if err != nil {
+		log.Fatal(err)
+	}
+	userNumberRaw = strings.TrimSpace(userNumberRaw)
+
+	userNumberFloat, err := strconv.ParseFloat(userNumberRaw, 64)
+	if err != nil {
+		fmt.Println("\n\nWould you please enter a number ?")
+		fmt.Println("Please rerun the program !\n\n I got this error : ")
+		log.Fatal(err)
+	}
+
+	return userNumberFloat
+
+}
