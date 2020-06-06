@@ -1,12 +1,10 @@
+//Package paintfunction fings the Liters of paint
+//you need to paint walls for given dimensions
 package main
 
 import (
-	"bufio"
+	kbInput "SDprj"
 	"fmt"
-	"log"
-	"os"
-	"strconv"
-	"strings"
 )
 
 func sayHi() {
@@ -20,14 +18,25 @@ func calcArea(wd float64, ht float64) float64 {
 }
 
 func wall() float64 {
-	fmt.Print("Enter the width of wall..... : ")
-	wd, _ := bufio.NewReader(os.Stdin).ReadString('\n')
+	// fmt.Print("Enter the width of wall..... : ")
+	kbInput.Prompt("Enter the width of wall..... : ")
+	var width float64
+	var wd = ""
+	width = kbInput.GetFloat(wd)
+
+	kbInput.Prompt("Enter the height of wall..... : ")
+	var height float64
+	var ht = ""
+	height = kbInput.GetFloat(ht)
+
+	/* wd, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	wd = strings.TrimSpace(wd)
 	width, _ := strconv.ParseFloat(wd, 64)
 	fmt.Print("Enter the height of wall.... : ")
 	ht, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	ht = strings.TrimSpace(ht)
 	height, _ := strconv.ParseFloat(ht, 64)
+	*/
 
 	// var ar float64
 	fmt.Printf("%.2f Liters of Paint required for this wall\n", calcArea(width, height))
@@ -39,18 +48,24 @@ func wall() float64 {
 
 func main() {
 	sayHi()
-	fmt.Print("How many walls do you have ? .... : ")
-	numWall, err := bufio.NewReader(os.Stdin).ReadString('\n')
-	if err != nil {
-		log.Fatal(err)
-	}
-	numWall = strings.TrimSpace(numWall)
-	wallNumber, err := strconv.Atoi(numWall)
-	if err != nil {
-		fmt.Println("\n\nWould you please enter a number ?")
-		fmt.Println("Please rerun the program !\n\n I got this error : ")
-		log.Fatal(err)
-	}
+	/*	fmt.Print("How many walls do you have ? .... : ")
+		numWall, err := bufio.NewReader(os.Stdin).ReadString('\n')
+		if err != nil {
+			log.Fatal(err)
+		}
+		numWall = strings.TrimSpace(numWall)
+		wallNumber, err := strconv.Atoi(numWall)
+		if err != nil {
+			fmt.Println("\n\nWould you please enter a number ?")
+			fmt.Println("Please rerun the program !\n\n I got this error : ")
+			log.Fatal(err)
+		}
+	*/
+
+	kbInput.Prompt("How many walls do you have ? .... : ")
+	var wallNumber int
+	var numWall = ""
+	wallNumber = kbInput.GetInt(numWall)
 
 	var totalPaint float64
 	var paintPerWall float64
