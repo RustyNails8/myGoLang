@@ -10,7 +10,7 @@ func TestHello(t *testing.T) {
 	// Test for empty argument
 	emptyResult := hello("")
 	// Output
-	// "hello Dude !!"
+	//  "hello Dude !!"
 
 	if emptyResult != "hello Dude !!" {
 		t.Errorf("hello(\"\") failed, expected %v , got %v", "hello Dude !!", emptyResult)

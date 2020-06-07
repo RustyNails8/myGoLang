@@ -1,0 +1,27 @@
+// Package kbInput takes inputs from user in various formats
+package kbInput
+
+import (
+	kbInput "SDprj"
+	"reflect"
+	"testing"
+)
+
+// Prompt Function kbInput.Prompt displays the User Prompt Message
+func TestPrompt(t *testing.T) {
+
+	// Test Empty Input Type
+	if reflect.TypeOf(kbInput.Prompt("")) != reflect.TypeOf("sss") {
+		t.Errorf("Failure in imported package kbInput.Prompt, expeted string, got %v", kbInput.Prompt("sss"))
+	}
+	// Output
+	//  "" // a blank Prompt Line
+
+	// Test Empty Input Type
+	if kbInput.Prompt("3") != "3" {
+		t.Errorf("Failure in imported package kbInput.Prompt, expeted string, got %v", "3")
+	}
+	// Output
+	//  "" // a blank Prompt Line
+
+}

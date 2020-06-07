@@ -18,6 +18,7 @@ var userNumberFloat float64
 // Prompt Function kbInput.Prompt displays the User Prompt Message
 func Prompt(userPrompt string) {
 	fmt.Print(userPrompt)
+	// return userPrompt
 }
 
 // GetInt Funciton kbInput.GeGetInt takes the integer from User Input

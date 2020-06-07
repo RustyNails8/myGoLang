@@ -11,7 +11,7 @@ func TestMain(t *testing.T) {
 	// Test for empty argument
 	emptyGreet := hello("")
 	// Output
-	// "hello Dude !!"
+	//  "hello Dude !!"
 
 	if emptyGreet != "hello Dude !!" {
 		t.Errorf("hello(\"\") failed, expected %v , got %v", "hello Dude !!", emptyGreet)

@@ -5,6 +5,7 @@ package main
 import (
 	kbInput "SDprj"
 	"fmt"
+	// kbInput "gitlab.com/RustyNails8/vendor/SDprj"
 )
 
 // Says Hi
