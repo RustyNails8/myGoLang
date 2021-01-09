@@ -1,10 +1,10 @@
 +++ 
 draft = false
 date = 2020-11-13T23:42:45+05:30
-title = ""
-description = ""
+title = "SDProjects"
+description = "Sumit Das Project Works"
 slug = ""
-authors = []
+authors = [SD]
 tags = []
 categories = []
 externalLink = ""
