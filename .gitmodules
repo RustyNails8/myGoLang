@@ -1,0 +1,2 @@
+[submodule "srv/themes/hugo-coder"]
+	url = https://github.com/luizdepra/hugo-coder
