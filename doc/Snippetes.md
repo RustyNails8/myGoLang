@@ -30,6 +30,17 @@ func main() {
 		log.Fatal(err)
 	}
 ```
+2.a. Web Query User Input
+```
+	fmt.Print("Enter the URL :   ")
+	url, err := bufio.NewReader(os.Stdin).ReadString('\n')
+	if err != nil {
+		fmt.Println("\n\nWould you please enter a valid URL ?")
+		fmt.Println("Please rerun the program !\n\n I got this error : ")
+		log.Fatal(err)
+	}
+	url = strings.TrimSpace(url)
+```
 
 3. FOR LOOP
 ```
