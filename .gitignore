@@ -6,3 +6,8 @@ tmp/*
 .idea/*
 .branchesgit
 collect/*
+TMP/*
+TEMP/*
+scratch/*
+*.tmp
+*.temp
